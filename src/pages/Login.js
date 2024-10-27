@@ -1,34 +1,39 @@
 // src/pages/Login.js
-import React, { useState } from 'react';
-import './Login.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Login.css";
 
-function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+const preventRefresh = (e) => {
+  e.preventDefault();
+};
 
-  const handleLogin = () => {
-    alert(`Logging in with email: ${email}`);
-    // Add authentication logic here later
-  };
-
+export default function Login() {
   return (
-    <div>
-      <h2>Login</h2>
-      <input
-        type="email"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleLogin}>Login</button>
+    <div className="wrapper signIn">
+      <div className="form">
+        <div className="heading">LOGIN</div>
+        <form>
+          <div>
+            <label htmlFor="email">E-Mail</label>
+            <input type="email" id="email" placeholder="Enter your email" />
+          </div>
+          <div>
+            <label htmlFor="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password" />
+          </div>
+          <button type="submit" onClick={preventRefresh}>
+            Submit
+          </button>
+          <div className="forgot-password">
+            <button type="button" className="forgot-password-btn">
+              Forgot Password?
+            </button>
+          </div>
+        </form>
+        <p>
+          Don't have an account? <Link to="/signup">Sign Up</Link>
+        </p>
+      </div>
     </div>
   );
 }
-
-export default Login;
