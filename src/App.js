@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import Dashboard from './components/Dashboard';
 import Home from './pages/Home';
 import Login from './pages/Login';
+import Challenge from './pages/Challenge';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/challenge" element={<Challenge />} /> 
                 </Routes>
                 <Footer />
             </div>
