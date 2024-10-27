@@ -1,0 +1,13 @@
+/* src/App.css */
+
+.app {
+  font-family: Arial, sans-serif;
+  background-color: #fafafa;
+}
+
+header, footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
