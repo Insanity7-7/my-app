@@ -9,6 +9,7 @@ const Header = ({ isLoggedIn, onLogout }) => {
             <h1>Trader Evaluation App</h1>
             <nav className="header-nav">
                 <Link to="/">Home</Link>
+                <li><Link to="/challenge">Challenge</Link></li>
                 <Link to="/dashboard">Dashboard</Link>
                 {isLoggedIn ? (
                     <button className="logout-button" onClick={onLogout}>Logout</button>
