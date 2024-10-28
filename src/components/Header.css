@@ -1,36 +1,27 @@
 /* src/components/Header.css */
-
 .header {
-  background-color: #333; /* Dark background color */
-  color: #fff; /* White text color */
-  padding: 20px;
-  display: flex; /* Use flexbox for horizontal layout */
-  justify-content: space-between; /* Space out the elements */
-  align-items: center; /* Center items vertically */
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
 }
 
-.header h1 {
-  margin: 0; /* Remove default margin */
-}
-
-.header-nav {
-  display: flex; /* Flexbox for navigation items */
-  gap: 20px; /* Space between navigation items */
-}
-
-.header-nav a,
+.header nav a,
 .logout-button {
-  color: #fff; /* White text color for links */
-  text-decoration: none; /* Remove underline for links */
-  padding: 10px 15px; /* Padding for clickable area */
-  border: none; /* Remove border for button */
-  background: transparent; /* Transparent background for button */
-  cursor: pointer; /* Pointer cursor for button */
-  transition: background-color 0.3s; /* Smooth transition for hover */
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
-.header-nav a:hover,
+.logout-button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
 .logout-button:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Light background on hover */
-  border-radius: 5px; /* Rounded corners */
+  background-color: #e84141;
 }

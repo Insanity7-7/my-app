@@ -1,6 +1,7 @@
 // src/pages/Signup.js
 import React from "react";
 import { Link } from "react-router-dom";
+import { signInWithGoogle } from "../firebaseConfig";
 
 export default function Signup() {
   return (
@@ -14,7 +15,7 @@ export default function Signup() {
           </div>
           <div>
             <label htmlFor="email">E-Mail</label>
-            <input type="text" id="email" placeholder="Enter your email" />
+            <input type="email" id="email" placeholder="Enter your email" />
           </div>
           <div>
             <label htmlFor="password">Password</label>
@@ -25,10 +26,14 @@ export default function Signup() {
             />
           </div>
           <button type="submit">Submit</button>
-          <h2 align="center" className="or">OR</h2>
+          <div className="google-auth">
+            <button type="button" className="google-signin-btn" onClick={signInWithGoogle}>
+              Sign up with Google
+            </button>
+          </div>
         </form>
         <p>
-          Have an account? <Link to="/login">Login</Link>
+          Have an account? <Link to="/">Login</Link>
         </p>
       </div>
     </div>

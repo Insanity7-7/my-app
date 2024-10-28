@@ -66,3 +66,25 @@
 .forgot-password-btn:hover {
   text-decoration: underline;
 }
+
+/* src/Login.css and src/Signup.css */
+
+.google-auth {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.google-signin-btn {
+  background-color: #4285f4;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.google-signin-btn:hover {
+  background-color: #357ae8;
+}

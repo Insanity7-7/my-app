@@ -23,19 +23,9 @@ const Dashboard = () => {
         fetchData();
     }, []);
 
-    const handleLogout = () => {
-        localStorage.removeItem('authToken');
-        alert('Logged out successfully');
-        // Optionally, redirect to the login page after logout
-        window.location.href = '/login';
-    };
-
     return (
         <div className="dashboard-container">
             <h1>Dashboard</h1>
-            <button onClick={handleLogout} className="logout-button">Logout</button>
-            {data && <PerformanceChart data={data} />}
-            {/* Render other dashboard components here */}
         </div>
     );
 };
