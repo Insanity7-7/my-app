@@ -21,7 +21,7 @@ export default function Header() {
   const handleLogout = async () => {
     try {
       await signOut(auth);
-      navigate("/"); // Redirect to login page after logout
+      navigate("/login"); // Redirect to login page after logout
     } catch (error) {
       console.error("Error during logout:", error.message);
     }
@@ -29,8 +29,9 @@ export default function Header() {
 
   return (
     <header className="header">
+      <h2>Funded Trading</h2>
       <nav>
-        <Link to="/home">Home</Link>
+        <Link to="/">Home</Link>
         <Link to="/challenge">Challenge</Link>
         <Link to="/dashboard">Dashboard</Link>
         {isAuthenticated ? (

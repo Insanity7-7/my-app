@@ -1,18 +1,9 @@
 import React from "react";
 import "./Home.css";
 
-export default function HomePage() {
+ const Home = () => {
   return (
     <div className="homepage">
-      <header className="homepage-header">
-        <h1>Funded Trading</h1>
-        <nav>
-          <a href="/home">Home</a>
-          <a href="/get-funded">Get Funded</a>
-          <a href="/succeed">Get Succeed</a>
-        </nav>
-      </header>
-
       <div className="main-section">
         <div className="center-banner">
           <h2>Get Funded Today</h2>
@@ -53,3 +44,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+export default Home;

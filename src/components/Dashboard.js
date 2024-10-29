@@ -5,23 +5,23 @@ import PerformanceChart from './PerformanceChart';
 import './Dashboard.css';
 
 const Dashboard = () => {
-    const [data, setData] = useState(null);
+    // const [data, setData] = useState(null);
 
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const authToken = localStorage.getItem('authToken');
-                const response = await axios.get('http://localhost:5000/api/protected', {
-                    headers: { Authorization: `Bearer ${authToken}` },
-                });
-                setData(response.data);
-            } catch (error) {
-                console.error('Error fetching protected data:', error);
-            }
-        };
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const authToken = localStorage.getItem('authToken');
+    //             const response = await axios.get('http://localhost:5000/api/protected', {
+    //                 headers: { Authorization: `Bearer ${authToken}` },
+    //             });
+    //             setData(response.data);
+    //         } catch (error) {
+    //             console.error('Error fetching protected data:', error);
+    //         }
+    //     };
 
-        fetchData();
-    }, []);
+    //     fetchData();
+    // }, []);
 
     return (
         <div className="dashboard-container">
